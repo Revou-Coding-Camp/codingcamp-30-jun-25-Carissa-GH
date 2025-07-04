@@ -96,3 +96,10 @@ function displayResult() {
     `;
 }
 
+// Function to hide the result form
+function hideResult() {
+    const resultForm = document.getElementById('result-form');
+    resultForm.style.display = 'none'; // Hide the result form
+    resultForm.innerHTML = ''; // Clear the content
+}
+
