@@ -38,56 +38,94 @@
       <!-- Hero section -->
       <section id="home" class="min-h-[200px] text-center">
         <header class="py-[32px] text-center">
-            <h1>Welcome to My Website</h1>
+            <h1><b>Hi! Welcome to My Website</b></h1>
+            <article>
+            <p>This is the website fot the Mini Project Coding Camp by RevoU.</p>
+        </article>
         </header>
         
         <!-- Banner -->
         <div class="h-[150px] bg-[url('https://img.freepik.com/free-photo/sky-sunset_1203-1666.jpg?semt=ais_hybrid&w=740')] bg-cover bg-center"></div>
+        
       </section>
+
+      <hr/>
 
       <!-- Our Profile -->
       <section id="our profile" class="min-h-[200px] text-center">
          <header class="py-[32px] text-center">
-            <h1>Our Profile</h1>
+            <h1><b>Our Profile</b></h1>
         </header>
         <article>
             <p>Hi, my name is Carissa. I just learned how to code from 0. I tried to join Coding Camp - Software Engineering from RevoU. In the live class I learned many things, including how to use HTML, CSS, Tailwind, and Javascript. In this program there are also mini projects that must be done and submitted to get a certificate.</p>
         </article>
       </section>
 
+      <hr/>
+
       <!-- Portofolio section -->
       <section id="portofolio" class="min-h-[200px] text-center">
          <header class="py-[32px] text-center">
-            <h1>Portofolio</h1>
+            <h1><b>Portofolio</b></h1>
         </header>
         <article>
             <p>In the Coding Camp - Software Engineering program from RevoU, I was assigned to work on a mini coding project using Visual Studio Code, Git, and GitHub. In it, I also used HTML, CSS, Tailwind, and Javascript to create my own website.</p>
         </article>
       </section>
+    
+    <hr/>
 
       <!-- Message Us section -->
       <section id="message us" class="min-h-[200px]">
          <header class="py-[32px] text-center">
-            <h1>Message Us</h1>
+            <h1><b>Message Us</b></h1>
         </header>
 
         <div class="flex justify-between items-center px-[16px]">
-                <!-- Message Form -->
+            <!-- Message Form -->
             <form>
                 <div>
                     <label for="name-input">Name:</label>
-                            <input type="text" id="name-input" name="name"
+                            <input type="text" id="name-input" name="name" 
                                 class="border border-gray-300 rounded p-[8px] w-full">
                 </div>
+
+                <div>
+                     <label for="birthdate-input">Birthdate:</label>
+                            <input type="date" id="birthdate-input" name="birthdate" 
+                                class="border border-gray-300 rounded p-[8px] w-full">
+                </div>
+
+                <div>
+                     <label for="gender-input">Gender:</label>
+                            <input type="radio" id="gender-input" name="gender" value="male">
+                            <label for="gender-input">Male</label>
+                            <input type="radio" id="gender-input" name="gender" value="female">
+                            <label for="gender-input">Female</label>
+                </div>
+
+                <div><label for="email-input">Email:</label>
+                            <input type="email" id="email-input" name="email" 
+                                class="border border-gray-300 rounded p-[8px] w-full">
+                </div>
+
+                <div><label for="message-input">Message:</label>
+                            <textarea id="message-input" name="message" 
+                                class="border border-gray-300 rounded p-[8px] w-full"></textarea>
+                </div>
+
+        
+            
+
             <div class="py-[16px]"></div>
                 <div>
-                    <button class="border rounded p-[8px] bg-blue-200 text-white">Send Message</button>
+                    <button type="button" class="border rounded p-[8px] bg-blue-200 text-white" onclick="validateform();">Send Message</button>
                 </div>
             </form>
 
-        <!-- Result form -->
+         <!-- Result form -->
             <aside class="py-[16px]">
-                <p>Thank you for your message!</p>
+                <p id="result-form">Thank you for your message!</p>
             </aside>
         </div>
                 
@@ -95,10 +133,12 @@
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="text-center">
+        <p>&copy; 2025 created by Carissa</p>
+    </footer>
     
     <!-- JS External -->
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
