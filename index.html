@@ -8,24 +8,23 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css\style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
+    
+    <!-- Tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-
     <!-- Header -->
-    <header class="main header">
-        
+    <header class="main-header p-[12px]">
       <!-- Logo -->
-      <div class="main logo"></div>
+      <div class="main-logo"></div>
 
       <!-- Navigation -->
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Our Profile</a>
-        <a href="#">Portofolio</a>
-        <a href="#">Message Us</a>
+        <a href="#home">Home</a>
+        <a href="#our profile">Our Profile</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#message us">Message Us</a>
       </nav>
 
 
@@ -35,7 +34,65 @@
 <hr />
 
     <!-- Main Content -->
-    <main></main>
+    <main>
+      <!-- Hero section -->
+      <section id="home" class="min-h-[200px] text-center">
+        <header class="py-[32px] text-center">
+            <h1>Welcome to My Website</h1>
+        </header>
+        
+        <!-- Banner -->
+        <div class="h-[150px] bg-[url('https://img.freepik.com/free-photo/sky-sunset_1203-1666.jpg?semt=ais_hybrid&w=740')] bg-cover bg-center"></div>
+      </section>
+
+      <!-- Our Profile -->
+      <section id="our profile" class="min-h-[200px] text-center">
+         <header class="py-[32px] text-center">
+            <h1>Our Profile</h1>
+        </header>
+        <article>
+            <p>Hi, my name is Carissa. I just learned how to code from 0. I tried to join Coding Camp - Software Engineering from RevoU. In the live class I learned many things, including how to use HTML, CSS, Tailwind, and Javascript. In this program there are also mini projects that must be done and submitted to get a certificate.</p>
+        </article>
+      </section>
+
+      <!-- Portofolio section -->
+      <section id="portofolio" class="min-h-[200px] text-center">
+         <header class="py-[32px] text-center">
+            <h1>Portofolio</h1>
+        </header>
+        <article>
+            <p>In the Coding Camp - Software Engineering program from RevoU, I was assigned to work on a mini coding project using Visual Studio Code, Git, and GitHub. In it, I also used HTML, CSS, Tailwind, and Javascript to create my own website.</p>
+        </article>
+      </section>
+
+      <!-- Message Us section -->
+      <section id="message us" class="min-h-[200px]">
+         <header class="py-[32px] text-center">
+            <h1>Message Us</h1>
+        </header>
+
+        <div class="flex justify-between items-center px-[16px]">
+                <!-- Message Form -->
+            <form>
+                <div>
+                    <label for="name-input">Name:</label>
+                            <input type="text" id="name-input" name="name"
+                                class="border border-gray-300 rounded p-[8px] w-full">
+                </div>
+            <div class="py-[16px]"></div>
+                <div>
+                    <button class="border rounded p-[8px] bg-blue-200 text-white">Send Message</button>
+                </div>
+            </form>
+
+        <!-- Result form -->
+            <aside class="py-[16px]">
+                <p>Thank you for your message!</p>
+            </aside>
+        </div>
+                
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer></footer>
