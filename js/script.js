@@ -63,43 +63,15 @@ function validateform() {
     console.log(messageinput.value);
 }
 
-// Function to clear the form inputs
-function clearform() {
-    document.getElementById('name-input').value = '';
-    document.getElementById('birthdate-input').value = '';
-    document.getElementById('gender-input').value = '';
-    document.getElementById('email-input').value = '';
-    document.getElementById('message-input').value = '';
-}
 
-// Function to display the result form
-function displayResult() {
-    const resultForm = document.getElementById('result-form');
-    resultForm.style.display = 'block'; // Show the result form
-    resultForm.innerHTML = ''; // Clear previous content
-
-    // Get the input values
-    const name = document.getElementById('name-input').value;
-    const birthdate = document.getElementById('birthdate-input').value;
-    const gender = document.querySelector('input[name="gender"]:checked')?.value;
-    const email = document.getElementById('email-input').value;
-    const message = document.getElementById('message-input').value;
-
-    // Display the input values in the result form
-    resultForm.innerHTML = `
-        <h2>Form Results</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Birthdate:</strong> ${birthdate}</p>
-        <p><strong>Gender:</strong> ${gender}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
-    `;
-}
-
-// Function to hide the result form
-function hideResult() {
-    const resultForm = document.getElementById('result-form');
-    resultForm.style.display = 'none'; // Hide the result form
-    resultForm.innerHTML = ''; // Clear the content
-}
+  // Time
+  function updateTime() {
+    const timeNow = new Date().toString();
+    const timeEl = document.getElementById("currentTime");
+    if (timeEl) {
+      timeEl.textContent = timeNow;
+    }
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
 
